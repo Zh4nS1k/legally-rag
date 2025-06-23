@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+openai
+pinecone-client
+python-dotenv
+pydantic
+sentence-transformers
+rank-bm25
+numpy
+scikit-learn
+tiktoken
+langchain
+langchain-openai
+langchain-community
