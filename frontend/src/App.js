@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 import AuthPage from './components/AuthPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import ProfileSection from './components/ProfileSection';
+import ChatSection from './components/ChatSection';
 import './styles/index.css';
 
 function App() {
@@ -248,6 +249,7 @@ function App() {
                       setAppState((prev) => ({ ...prev, error: null }))
                     }
                     onHistoryClick={() => navigate('/history')}
+                    onChatClick={() => navigate('/chat')}
                     onCancelUpload={handleCancelUpload}
                     onRemoveFile={handleRemoveFile}
                   />
@@ -260,6 +262,17 @@ function App() {
             element={
               <ProtectedRoute isAuthenticated={appState.isAuthenticated}>
                 <HistorySection onBackClick={() => navigate('/')} />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/chat"
+            element={
+              <ProtectedRoute isAuthenticated={appState.isAuthenticated}>
+                <ChatSection
+                  isAuthenticated={appState.isAuthenticated}
+                  onBackClick={() => navigate('/')}
+                />
               </ProtectedRoute>
             }
           />

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+chromadb
+openai
+pydantic
+python-jose
+passlib[bcrypt]
+pymongo
+networkx
+python-multipart 

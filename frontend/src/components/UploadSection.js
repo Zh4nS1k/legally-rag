@@ -57,6 +57,7 @@ function UploadSection({
   fileInfo,
   error,
   onHistoryClick,
+  onChatClick,
   isLoading = false,
   onClearError,
   onCancelUpload,
@@ -261,10 +262,21 @@ function UploadSection({
               variant="outlined"
               size="large"
               startIcon={<HistoryIcon />}
-              onClick={() => navigate('/history')}
+              onClick={onHistoryClick}
               disabled={isLoading}
             >
               История проверок
+            </Button>
+
+            <Button
+              variant="contained"
+              size="large"
+              color="success"
+              onClick={onChatClick}
+              disabled={isLoading}
+              sx={{ minWidth: 180 }}
+            >
+              Связаться с AI
             </Button>
           </Stack>
 
